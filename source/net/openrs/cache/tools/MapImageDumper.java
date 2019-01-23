@@ -176,7 +176,7 @@ public class MapImageDumper {
 
     private static final boolean DRAW_WALLS = true;
     private static final boolean DRAW_ICONS = true;
-    private static final boolean DRAW_REGIONS = true;
+    private static final boolean DRAW_REGIONS = false;
     private static final boolean LABEL = true;
     private static final boolean OUTLINE = true;
     private static final boolean FILL = true;
@@ -299,7 +299,7 @@ public class MapImageDumper {
             graphics.dispose();
 
             System.out.println("Writing to files");
-            ImageIO.write(baseImage, "png", new File("base_image_" + z + ".png"));
+            //ImageIO.write(baseImage, "png", new File("base_image_" + z + ".png"));
             ImageIO.write(fullImage, "png", new File("full_image_" + z + ".png"));
         }
     }

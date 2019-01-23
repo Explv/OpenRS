@@ -469,7 +469,7 @@ public class ReferenceTable {
 		/* read the child identifiers if present */
 		if ((table.flags & FLAG_IDENTIFIERS) != 0) {
 			for (int id : ids) {
-				identifiersArray = new int[members[id].length];
+				identifiersArray = new int[members[id][members[id].length - 1] + 1];
 				for (int child : members[id]) {
 					int identifier = buffer.getInt();
 					identifiersArray[child] = identifier;
