@@ -56,8 +56,6 @@ import net.openrs.cache.type.varbits.VarBitType;
 import net.openrs.cache.type.varbits.VarBitTypeList;
 import net.openrs.cache.type.varclients.VarClientType;
 import net.openrs.cache.type.varclients.VarClientTypeList;
-import net.openrs.cache.type.varclientstrings.VarClientStringType;
-import net.openrs.cache.type.varclientstrings.VarClientStringTypeList;
 import net.openrs.cache.type.varplayers.VarPlayerType;
 import net.openrs.cache.type.varplayers.VarPlayerTypeList;
 
@@ -80,7 +78,6 @@ public class TypeListManager {
 	private static final UnderlayTypeList under = new UnderlayTypeList();
 	private static final VarBitTypeList varbit = new VarBitTypeList();
 	private static final VarClientTypeList varc = new VarClientTypeList();
-	private static final VarClientStringTypeList varcstr = new VarClientStringTypeList();
 	private static final VarPlayerTypeList varp = new VarPlayerTypeList();
 	private static final AreaTypeList area = new AreaTypeList();
 	private static final ParamTypeList param = new ParamTypeList();
@@ -101,7 +98,6 @@ public class TypeListManager {
 		under.initialize(cache);
 		varbit.initialize(cache);
 		varc.initialize(cache);
-		varcstr.initialize(cache);
 		varp.initialize(cache);
 		area.initialize(cache);
 		param.initialize(cache);
@@ -157,11 +153,7 @@ public class TypeListManager {
 	public static final int varcSize() {
 		return varc.size();
 	}
-	
-	public static final int varcstrSize() {
-		return varcstr.size();
-	}
-	
+
 	public static final int varpSize() {
 		return varp.size();
 	}
@@ -234,10 +226,6 @@ public class TypeListManager {
 		return varc.list(id);
 	}
 
-	public static final VarClientStringType lookupVarClientString(int id) {
-		return varcstr.list(id);
-	}
-
 	public static final VarPlayerType lookupVarPlayer(int id) {
 		return varp.list(id);
 	}
@@ -269,7 +257,6 @@ public class TypeListManager {
 		varp.print();
 		varbit.print();
 		varc.print();
-		varcstr.print();
 		under.print();
 		over.print();
 		enm.print();

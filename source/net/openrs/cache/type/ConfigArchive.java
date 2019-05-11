@@ -45,7 +45,6 @@ public enum ConfigArchive {
 	UNDERLAY(1), 
 	VARBIT(14), 
 	VARCLIENT(19), 
-	VARCLIENTSTRING(15), 
 	VARPLAYER(16);
 
 	private final int id;
